@@ -1,8 +1,11 @@
-require("@nomiclabs/hardhat-waffle");
+require('@nomiclabs/hardhat-waffle');
 
 module.exports = {
-  solidity: "0.7.5",
+  networks: {
+    hardhat: {},
+  },
+  solidity: '0.8.9',
   paths: {
-    artifacts: "./app/artifacts",
-  }
+    artifacts: './app/artifacts',
+  },
 };

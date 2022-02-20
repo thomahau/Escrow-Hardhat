@@ -1,38 +1,45 @@
 <html>
   <head>
-    <title> Escrow Dapp </title>
+    <title>Escrow Dapp</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
   </head>
 
   <body>
-    <div class="contract">
-      <h1> New Contract </h1>
-      <label>
-        Arbiter Address
-        <input type="text" id="arbiter"/>
-      </label>
+    <main class="columns">
+      <div class="column">
+        <h3 class="title py-2">New Contract</h3>
 
-      <label>
-        Beneficiary Address
-        <input type="text" id="beneficiary"/>
-      </label>
+        <div class="field">
+          <label class="label is-uppercase" for="arbiter"> Arbiter Address</label>
+          <div class="control">
+            <input type="text" id="arbiter" class="input" placeholder="0x..." />
+          </div>
+        </div>
 
-      <label>
-        Deposit Amount (in Wei)
-        <input type="text" id="wei"/>
-      </label>
+        <div class="field">
+          <label class="label is-uppercase" for="beneficiary"> Beneficiary Address</label>
+          <div class="control">
+            <input type="text" id="beneficiary" class="input" placeholder="0x..." />
+          </div>
+        </div>
 
-      <div class="button" id="deploy">
-        Deploy
+        <div class="field">
+          <label class="label is-uppercase"> Deposit Amount (in Ether)</label>
+          <div class="control">
+            <input type="text" id="ether" class="input" />
+          </div>
+        </div>
+        <div class="button is-primary is-uppercase px-6" id="deploy">Deploy</div>
       </div>
-    </div>
 
-    <div class="existing-contracts">
-      <h1> Existing Contracts </h1>
+      <div class="existing-contracts column">
+        <h3 class="title py-2">Existing Contracts</h3>
 
-      <div id="container">
+        <div id="container">
           <!-- where existing contracts will go -->
+        </div>
       </div>
-    </div>
+    </main>
 
     <script src="./index.js" type="module"></script>
   </body>
